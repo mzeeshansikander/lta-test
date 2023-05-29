@@ -1,10 +1,17 @@
+// Global Layout
+
+// Styles Imports
 import "@/styles/globals.css"
+// Next Imports
 import { Metadata } from "next"
 
+// Config Imports
 import { siteConfig } from "@/config/site"
+// Lib Imports
 import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
-import { SiteHeader } from "@/components/site-header"
+import Sidebar from "@/components/Sidebar"
+// Components Imports
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
 
@@ -41,11 +48,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
           )}
         >
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <div className="relative flex min-h-screen flex-col">
-              <SiteHeader />
+            <div className="flex h-[100vh] ">
+              <Sidebar />
               <div className="flex-1">{children}</div>
             </div>
-            <TailwindIndicator />
           </ThemeProvider>
         </body>
       </html>

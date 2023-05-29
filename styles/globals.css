@@ -69,7 +69,9 @@
     --radius: 0.5rem;
   }
 }
-
+.box {
+  clip-path: polygon(0 162.00px,162.00px 0,100% 0,100% 100%,162.00px 100%,0 calc(100% - 162.00px));
+}
 @layer base {
   * {
     @apply border-border;
